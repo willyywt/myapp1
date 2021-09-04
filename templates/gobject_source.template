@@ -1,0 +1,46 @@
+/*  {{ gobject.file_name }}.{{ gobject.source_suffix }}
+
+    This file is part of {{ project.name }}.
+{{ project.license_header}}
+*/
+
+#include "private.h"
+
+struct _{{ gobject.camelname }}
+{
+  /* parent instance member */
+  GObject parent;
+
+  /* Declare instance members here */
+
+};
+struct _{{ gobject.camelname }}Class
+{
+  /* parent class member */
+  GObjectClass parent;
+
+  /* Declare class members here */
+
+};
+
+G_DEFINE_TYPE ({{ gobject.camelname }}, {{ gobject.snakename }}, G_TYPE_OBJECT) 
+
+static void
+{{ gobject.snakename }}_class_init ({{ gobject.camelname }}Class *klass)
+{
+  /* Init class here */
+}
+
+static void
+{{ gobject.snakename }}_init ({{ gobject.camelname }} *{{ gobject.snakename_deprefix }})
+{
+  /* Init instance here */
+}
+
+{{ gobject.camelname }} *
+{{ gobject.snakename }}_new (void)
+{
+  {{ gobject.camelname }} *{{ gobject.snakename_deprefix }};
+  {{ gobject.snakename_deprefix }} = g_object_new ({{ gobject.prefix_upper }}_TYPE_{{ gobject.snakename_deprefix_upper}}, NULL);
+  return {{ gobject.snakename_deprefix }};
+}

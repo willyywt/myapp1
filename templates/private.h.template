@@ -1,0 +1,15 @@
+/*  {{ project.name_lower }}.{{ project.header_suffix }}
+
+    This file is part of {{ project.name }}.
+{{ project.license_header }}
+ */
+
+#ifndef PRIVATE_H_INCLUDED
+#define PRIVATE_H_INCLUDED
+
+/* Project header */
+#include "{{ project.name_lower }}.{{ project.header_suffix }}"
+
+/* Add private headers here */
+
+#endif /* PRIVATE_H_INCLUDED */

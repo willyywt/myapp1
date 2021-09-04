@@ -1,0 +1,28 @@
+/*  {{ gobject.file_name }}.{{ gobject.header_suffix }}
+
+    This file is part of {{ project.name }}.
+{{ project.license_header }}
+ */
+
+#ifndef {{ gobject.file_name }}_H_INCLUDED
+#define {{ gobject.file_name }}_H_INCLUDED
+
+#ifndef __{{ project.name_lower }}_INSIDE
+#error "Only <{{ project.name_lower }}.{{ project.header_suffix }}> can be included directly. "
+/* Be nice to clangd which parses every header file separately, unlike actual compilers */
+#include "{{ project.name_lower }}.{{ project.header_suffix }}"
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define {{ gobject.prefix_upper }}_TYPE_{{ gobject.snakename_deprefix_upper }} {{ gobject.snakename }}_get_type ()
+G_DECLARE_FINAL_TYPE ({{ gobject.camelname }}, {{ gobject.snakename }}, {{ gobject.prefix_upper }}, {{ gobject.snakename_deprefix_upper }}, GObject)
+
+{{ gobject.camelname }} * {{ gobject.snakename }}_new (void);
+
+#ifdef __cplusplus
+}
+#endif
+#endif /* {{ gobject.file_name }}_H_INCLUDED */

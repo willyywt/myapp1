@@ -1,0 +1,5 @@
+meson.build
+src/meson.build
+data/meson.build
+build-myapp/*
+compile_commands.json

@@ -1,0 +1,10 @@
+<project name="myapp1" version="0.1.0" prefix="My">
+	<license file="LICENSE" header="license_header" />
+	<dependency name="gtk4" />
+	<class name="App" />
+	<class name="AppWindow" />
+	<main name="main" />
+	<target name="meson">
+	</target>
+	<target name="nix" />
+</project>

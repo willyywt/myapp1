@@ -1,0 +1,28 @@
+/*  {{ klass.file_name }}.{{ klass.header_suffix }}
+
+    This file is part of {{ project.name }}.
+{{ project.license_header }}
+ */
+
+#ifndef {{ klass.file_name }}_H_INCLUDED
+#define {{ klass.file_name }}_H_INCLUDED
+
+#ifndef __{{ project.name_lower }}_INSIDE
+#error "Only <{{ project.name_lower }}.{{ project.header_suffix }}> can be included directly. "
+/* Be nice to clangd which parses every header file separately, unlike actual compilers */
+#include "{{ project.name_lower }}.{{ project.header_suffix }}"
+#endif
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct _{{ klass.camelname }} {{ klass.camelname }};
+
+{{ klass.camelname }} * {{ klass.snakename }}_new (void);
+void {{ klass.snakename }}_destroy ({{ klass.camelname }} *{{ klass.snakename_deprefix }});
+
+#ifdef __cplusplus
+}
+#endif
+#endif /* {{ klass.file_name }}_H_INCLUDED */

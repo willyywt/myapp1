@@ -1,0 +1,34 @@
+/*  {{ klass.file_name }}.{{ klass.source_suffix }}
+
+    This file is part of {{ project.name }}.
+{{ project.license_header}}
+*/
+
+#include "private.h"
+
+struct _{{ klass.camelname }}
+{
+  /* Declare class properties here */
+  int placeholder;
+};
+
+
+{{ klass.camelname }} *
+{{ klass.snakename }}_new (void)
+{
+  {{ klass.camelname }} *{{ klass.snakename_deprefix }} = g_new ({{ klass.camelname }}, 1);
+
+  /* Do initialization here */
+
+  return {{ klass.snakename_deprefix }};
+}
+
+void
+{{ klass.snakename }}_destroy ({{ klass.camelname }} *{{ klass.snakename_deprefix }})
+{
+  g_return_if_fail ({{ klass.snakename_deprefix }} != NULL);
+
+  /* Do finalization here */
+
+  g_free ({{ klass.snakename_deprefix }});
+}

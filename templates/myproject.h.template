@@ -1,0 +1,16 @@
+/*  {{ project.name_lower }}.{{ project.header_suffix }}
+
+    This file is part of {{ project.name }}.
+{{ project.license_header }}
+ */
+
+#ifndef {{ project.name_lower }}_H_INCLUDED
+#define {{ project.name_lower }}_H_INCLUDED
+#define __{{ project.name_lower }}_INSIDE
+
+/* Dependency, must go first */
+
+/* Classes */
+
+#undef __{{ project.name_lower }}_INSIDE
+#endif /* {{ project.name_lower }}_H_INCLUDED */
