@@ -3,6 +3,9 @@
 ##################################################
 
 # data_ things are meson variables, not quoted; class.c are meson strings, quoted
+compile_args = cc.get_supported_arguments([])
+{% for compile_option in meson_src.compile_options %}compile_args += ['{{ compile_option }}']
+{% endfor %}
 {% for main in meson_src.main %}
 executable('{{ main }}',
   '{{ main }}.c',
@@ -11,6 +14,6 @@ executable('{{ main }}',
 {% if "gresource" in meson_data %}  data_gresource,{% endif %}
 {% if "gschema" in meson_data %}  data_gschema,{% endif %}
   dependencies: dependency_all,
-  c_args: cc.get_supported_arguments([])
+  c_args: compile_args
 ){% endfor %}
 

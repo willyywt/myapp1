@@ -21,7 +21,7 @@ extern "C" {
 #endif
 
 #define MY_TYPE_APP_WINDOW my_app_window_get_type ()
-G_DECLARE_FINAL_TYPE (MyAppWindow, my_app_window, MY, APP_WINDOW, GtkApplicationWindow)
+G_DECLARE_FINAL_TYPE (MyAppWindow, my_app_window, MY, APP_WINDOW, GtkWindow)
 
 MyAppWindow * my_app_window_new (MyApp *app);
 

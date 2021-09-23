@@ -14,5 +14,6 @@
 #include "myapp1.h"
 
 /* Add private headers here */
+#include "config.h"
 
 #endif /* PRIVATE_H_INCLUDED */

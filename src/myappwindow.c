@@ -21,12 +21,12 @@ struct _MyAppWindowClass
 G_DEFINE_TYPE (MyAppWindow, my_app_window, GTK_TYPE_WINDOW) 
 
 static void
-my_app_window_class_init (MyAppWindowClass *klass)
+my_app_window_class_init (G_GNUC_UNUSED MyAppWindowClass *klass)
 {
 }
 
 static void
-my_app_window_init (MyAppWindow *app_window)
+my_app_window_init (G_GNUC_UNUSED MyAppWindow *app_window)
 {
 }
 

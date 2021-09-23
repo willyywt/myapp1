@@ -1,5 +1,6 @@
 meson.build
 src/meson.build
+src/config.h
 data/meson.build
 build-myapp/*
 compile_commands.json

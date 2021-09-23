@@ -6,6 +6,8 @@ cc = meson.get_compiler('c')
 dependency_all = []
 # Meson force us to use subdirs, because it does not like slashes '/' and dots '.'
 # Meson likes single quotes '' so remember to add them 
+# Meson hate double quotes, never use them
+# Meson doesn't seem to use brackets { and }, it's great f0r jinja
 subdir('data')
 {% for dep in project.dependency %}
 dependency_all += dependency('{{ dep.name }}')

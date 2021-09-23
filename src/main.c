@@ -13,7 +13,16 @@ int
 main (int argc, char *argv[])
 {
   int status;
-  status = g_application_run (G_APPLICATION (my_app_new ()), argc, argv);
+  MyApp *app;
+  GApplication *gapp;
+  app = my_app_new();
+  GOptionEntry entries[] = {
+    {"theme-dir", 't', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, NULL, "Theme directory", NULL}
+  };
+  gapp = G_APPLICATION (app);
+
+  g_application_add_main_option_entries (gapp, entries);
+  status = g_application_run (gapp, argc, argv);
   return status;
 }
 
